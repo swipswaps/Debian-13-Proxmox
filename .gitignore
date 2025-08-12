@@ -1,55 +1,17 @@
-# Prerequisites
-*.d
+# Gitignore for Proxmox/Debian Scripts
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Log files
+*.log
+*.bak
 
-# Precompiled Headers
-*.gch
-*.pch
+# Temporary files
+*.swp
+*.swo
 
-# Linker files
-*.ilk
+# IDE/Editor files
+.vscode/
+.idea/
 
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
-=======
-echo "# Gitignore for Proxmox/Debian Scripts" > .gitignore
-echo "" >> .gitignore
-echo "# Log files" >> .gitignore
-echo "*.log" >> .gitignore
-echo "*.bak" >> .gitignore
-echo "" >> .gitignore
-echo "# Temporary files" >> .gitignore
-echo "*.swp" >> .gitignore
-echo "*.swo" >> .gitignore
-echo "" >> .gitignore
-echo "# IDE/Editor files" >> .gitignore
-echo ".vscode/" >> .gitignore
-echo ".idea/" >> .gitignore
+# OS-generated files
+.DS_Store
+Thumbs.db
