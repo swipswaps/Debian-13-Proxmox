@@ -1,0 +1,21 @@
+#cloud-config
+autoinstall:
+  version: 1
+hostname: debian-13-template
+fqdn: debian-13-template.local
+
+users:
+  - name: your_username
+    gecos: Your Name
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, sudo
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - "ssh-rsa your_ssh_public_key"
+
+packages:
+  - qemu-guest-agent
+  - openssh-server
+
+runcmd:
+  - [ sh, -c, "echo 'This script is run as a part of cloud-init.' >> /var/log/cloud-init-custom.log" ]
